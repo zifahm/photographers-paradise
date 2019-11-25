@@ -1,0 +1,18 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "afifia",
+  "password": "753951",
+  "database": "paradise",
+  "synchronize": true,
+  "logging": false,
+  "entities": ["src/entity/**/*.*"],
+  "migrations": ["src/migration/**/*.*"],
+  "subscribers": ["src/subscriber/**/*.*"],
+  "cli": {
+    "entitiesDir": "src/entity",
+    "migrationsDir": "src/migration",
+    "subscribersDir": "src/subscriber"
+  }
+}

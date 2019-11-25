@@ -1,0 +1,15 @@
+{
+  "name": "photographers-paradise",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "lerna": "^3.19.0"
+  },
+  "scripts": {
+    "clean": "lerna clean  --yes && rm -rf node_modules",
+    "fresh": "yarn clean && yarn"
+  }
+}
