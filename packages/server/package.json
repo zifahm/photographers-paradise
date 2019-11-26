@@ -1,21 +1,45 @@
 {
   "name": "@photographers-paradise/server",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "devDependencies": {
-    "@types/node": "^12.12.12",
+    "@types/connect-redis": "^0.0.13",
+    "@types/cors": "^2.8.6",
+    "@types/express-session": "^1.15.16",
+    "@types/geojson": "^7946.0.7",
+    "@types/ioredis": "^4.0.19",
+    "@types/node": "^12.12.14",
+    "@types/pino": "^5.8.13",
+    "@types/uuid": "^3.4.6",
+    "@types/yup": "^0.26.24",
     "ts-node": "8.5.2",
     "typescript": "3.7.2"
   },
   "dependencies": {
+    "@photographers-paradise/common": "1.0.0",
+    "@types/bcryptjs": "^2.4.2",
     "@types/graphql": "^14.5.0",
     "apollo-server-express": "^2.9.12",
+    "bcryptjs": "^2.4.3",
+    "connect-redis": "^4.0.3",
+    "cors": "^2.8.5",
+    "dataloader": "1.4.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "geojson": "^0.5.0",
     "graphql": "^14.5.8",
+    "ioredis": "^4.14.1",
     "pg": "^7.3.0",
+    "pino": "^5.14.0",
+    "pino-pretty": "^3.4.0",
     "reflect-metadata": "^0.1.10",
     "type-graphql": "^0.17.5",
-    "typeorm": "0.2.20"
+    "typedi": "^0.8.0",
+    "typeorm": "0.2.20",
+    "typeorm-typedi-extensions": "^0.2.3",
+    "uuid": "^3.3.3",
+    "yup": "^0.27.0"
   },
   "scripts": {
     "start": "ts-node src/index.ts"

@@ -9,6 +9,7 @@
     "lerna": "^3.19.0"
   },
   "scripts": {
+    "build:common": "lerna run build --scope='@photographers-paradise/common'",
     "clean": "lerna clean  --yes && rm -rf node_modules",
     "fresh": "yarn clean && yarn"
   }

@@ -1,4 +1,5 @@
 {
+  "extends": "../tsconfig.json",
   "compilerOptions": {
     "lib": ["es6", "es2017", "esnext.asynciterable"],
     "target": "es2017",
@@ -7,6 +8,8 @@
     "outDir": "./dist",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "strictPropertyInitialization": false
   }
 }

@@ -6,7 +6,7 @@
   "password": "753951",
   "database": "paradise",
   "synchronize": true,
-  "logging": false,
+  "logging": true,
   "entities": ["src/entity/**/*.*"],
   "migrations": ["src/migration/**/*.*"],
   "subscribers": ["src/subscriber/**/*.*"],

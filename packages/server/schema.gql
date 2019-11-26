@@ -3,6 +3,57 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
+"""
+The javascript `Date` as string. Type represents date and time as the ISO Date string.
+"""
+scalar DateTime
+
+type ErrorResponse {
+  path: String!
+  message: String!
+}
+
+type Listing {
+  id: ID!
+  minimumHours: String
+  pastClients: String
+  policyRules: String
+  studioName: String!
+  description: String!
+  studioType: String!
+  studioHours: String!
+  amenities: String!
+  mainEquipments: String!
+  latitude: Float!
+  longitude: Float!
+  pictureUrl: [String!]!
+  pricePerHour: Int!
+  address: String!
+  userId: ID!
+  creator: User!
+}
+
+type Mutation {
+  signup(signupInput: SignupInput!): [ErrorResponse!]
+}
+
 type Query {
   hello: String!
+}
+
+input SignupInput {
+  firstName: String!
+  lastName: String!
+  email: String!
+  password: String!
+}
+
+type User {
+  id: ID!
+  firstName: String!
+  lastName: String
+  email: String!
+  biography: String
+  avatar: String
+  createdAt: DateTime!
 }
