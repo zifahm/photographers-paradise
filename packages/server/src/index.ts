@@ -2,17 +2,20 @@ import { ApolloServer } from "apollo-server-express";
 import * as express from "express";
 import "reflect-metadata";
 import { buildSchema } from "type-graphql";
-import { createConnection } from "typeorm";
+import { Container } from "typedi";
+import { createConnection, useContainer } from "typeorm";
 
 (async () => {
   const app = express();
 
+  useContainer(Container);
   await createConnection();
 
   const server = new ApolloServer({
     schema: await buildSchema({
       resolvers: [__dirname + "/./modules/**/*.resolver.ts"],
-      emitSchemaFile: true
+      emitSchemaFile: true,
+      container: Container
     })
   });
 
